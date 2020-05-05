@@ -17,4 +17,22 @@ describe('Codility tests', () => {
       expect(actual).to.be.equal(-31)
     })
   })
+
+  describe('Tests for PairSum', () => {
+    it('[2, -4, 6, -3, 11, 12] to 8', () => {
+      let array = [2, -4, 6, -3, 11, 12]
+      let actual = codility.PairSum(array, 8)
+      expect(actual).to.be.eql([[-4, 12], [-3, 11], [2, 6]])
+    })
+    it('[3, 2, 4] to 6', () => {
+      let array = [3, 2, 4]
+      let actual = codility.PairSum(array, 6)
+      expect(actual).to.be.eql([[2, 4]])
+    })
+    it('[3, 2, 2, 2, 4, 3, 4] to 6', () => {
+      let array = [3, 2, 4]
+      let actual = codility.PairSum(array, 6)
+      expect(actual).to.be.eql([[2, 4]])
+    })
+  })
 })
